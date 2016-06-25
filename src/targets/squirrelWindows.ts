@@ -17,7 +17,7 @@ export default class SquirrelWindowsTarget {
   async build(packOptions: ElectronPackagerOptions, arch: Arch) {
     const version = this.packager.metadata.version
     const archSuffix = getArchSuffix(arch)
-    const setupFileName = `${this.packager.appName} Setup ${version}${archSuffix}.exe`
+    const setupFileName = `${this.packager.appName}Setup.exe`
 
     const installerOutDir = path.join(this.appOutDir, "..", `win${getArchSuffix(arch)}`)
     await emptyDir(installerOutDir)
