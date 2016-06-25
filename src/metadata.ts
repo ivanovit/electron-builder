@@ -458,7 +458,7 @@ export interface PlatformSpecificBuildOptions {
 }
 
 export class Platform {
-  static MAC = new Platform("mac", "mac", "darwin")
+  static MAC = new Platform("mac", "osx", "darwin")
   static LINUX = new Platform("linux", "linux", "linux")
   static WINDOWS = new Platform("windows", "win", "win32")
 

@@ -1,7 +1,7 @@
 import { WinPackager } from "../winPackager"
 import { getArchSuffix, Target } from "../platformPackager"
 import { Arch, WinBuildOptions } from "../metadata"
-import { createWindowsInstaller, convertVersion } from "electron-winstaller-fixed"
+import { createWindowsInstaller, convertVersion } from "electron-winstaller"
 import * as path from "path"
 import { warn } from "../util/log"
 import { emptyDir } from "fs-extra-p"
@@ -19,9 +19,9 @@ export default class SquirrelWindowsTarget extends Target {
     const appInfo = this.packager.appInfo
     const version = appInfo.version
     const archSuffix = getArchSuffix(arch)
-    const setupFileName = `${appInfo.productName} Setup ${version}${archSuffix}.exe`
+    const setupFileName = `${appInfo.productName}Setup.exe`
 
-    const installerOutDir = path.join(appOutDir, "..", `win${getArchSuffix(arch)}`)
+    const installerOutDir = path.join(appOutDir, "..", `win`)
     await emptyDir(installerOutDir)
 
     const distOptions = await this.computeEffectiveDistOptions(appOutDir, installerOutDir, setupFileName)
@@ -78,7 +78,6 @@ export default class SquirrelWindowsTarget extends Target {
       setupIcon: await packager.getIconPath(),
       certificateFile: cscInfo == null ? null : cscInfo.file,
       certificatePassword: cscInfo == null ? null : cscInfo.password,
-      fixUpPaths: false,
       skipUpdateIcon: true,
       usePackageJson: false,
       extraMetadataSpecs: projectUrl == null ? null : `\n    <projectUrl>${projectUrl}</projectUrl>`,

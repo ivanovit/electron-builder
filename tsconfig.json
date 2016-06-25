@@ -31,7 +31,9 @@
     "node_modules/fs-extra-p/bluebird.d.ts",
     "node_modules/electron-osx-sign-tf/index.d.ts",
     "node_modules/@types/**/*.d.ts",
-    "!node_modules/@types/node/node-*.d.ts"
+    "!node_modules/@types/node/node-*.d.ts",
+    "!node_modules/@types/progress/node_modules/**/*.d.ts",
+    "!node_modules/@types/source-map-support/node_modules/**/*.d.ts"
   ],
   "files": [
     "typings/ansi-escapes.d.ts",
@@ -39,7 +41,7 @@
     "typings/asar.d.ts",
     "typings/deep-assign.d.ts",
     "typings/electron-packager.d.ts",
-    "typings/electron-winstaller-fixed.d.ts",
+    "typings/electron-winstaller.d.ts",
     "typings/gh-api.d.ts",
     "typings/hosted-git-info.d.ts",
     "typings/lib.es2016.array.include.d.ts",

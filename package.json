@@ -1,7 +1,7 @@
 {
   "name": "electron-builder",
   "description": "Complete solution to build ready for distribution and 'auto update' Electron App installers",
-  "version": "0.0.0-semantic-release",
+  "version": "5.6.2-ice",
   "main": "out/index.js",
   "files": [
     "out",
@@ -68,7 +68,7 @@
     "deep-assign": "^2.0.0",
     "electron-osx-sign-tf": "0.6.0",
     "electron-packager-tf": "~7.4.0",
-    "electron-winstaller-fixed": "~2.11.4",
+    "electron-winstaller": "https://artifactsrvbg01.telerik.com/artifactory/appbuilder-main/Telerik/AppBuilder/ElectronWindowsInstallerFork/electron-winstaller-2.2.0.tgz",
     "fs-extra-p": "^1.0.3",
     "hosted-git-info": "^2.1.5",
     "image-size": "^0.5.0",
@@ -103,6 +103,7 @@
     "@types/chalk": "^0.4.22-alpha",
     "@types/debug": "0.0.22-alpha",
     "@types/mime": "0.0.22-alpha",
+    "@types/node": "^4.0.22-alpha",
     "@types/progress": "^1.1.21-alpha",
     "@types/semver": "^4.3.20-alpha",
     "@types/source-map-support": "^0.2.21-alpha",

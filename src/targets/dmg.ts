@@ -33,7 +33,7 @@ export class DmgTarget extends Target {
 
   async build(appOutDir: string) {
     const appInfo = this.packager.appInfo
-    const artifactPath = path.join(appOutDir, `${appInfo.productName}-${appInfo.version}.dmg`)
+    const artifactPath = path.join(appOutDir, `${appInfo.productName}.dmg`)
     await new BluebirdPromise<any>(async(resolve, reject) => {
       log("Creating DMG")
       const dmgOptions = {
